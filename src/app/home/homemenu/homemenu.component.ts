@@ -21,10 +21,10 @@ export class HomemenuComponent implements OnInit {
   rows:number[]=[1,2];
   deals: Deals[] = [
     new Deals('product1', 2, '#lnr-car'),
-    new Deals('product5', 2, '#lnr-bicycle'),
     new Deals('product2', 1, '#lnr-heart-pulse'),
     new Deals('product3', 3, '#lnr-diamond'),
     new Deals('product4', 4, '#lnr-screen'),
+    new Deals('product5', 2, '#lnr-bicycle'),
     new Deals('product6', 1, '#lnr-leaf'),
     new Deals('product7', 3, '#lnr-printer'),
     new Deals('product8', 4, '#lnr-shirt'),

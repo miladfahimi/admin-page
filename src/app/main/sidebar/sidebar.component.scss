@@ -1,6 +1,5 @@
 .sidebar {
-    flex: 0 0 5rem;
-    // height: 92vh;
+    flex: 0 0 5rem; // height: 92vh;
     text-align: center;
     color: white;
     background-color: var(--violet-3);
@@ -10,8 +9,7 @@
     &__container {
         display: flex;
         flex-direction: column;
-        justify-items: center;
-        // height: 92vh;
+        justify-items: center; // height: 92vh;
         @media screen and (max-width: 600px) {
             flex-direction: row;
             height: 5rem;
@@ -60,6 +58,9 @@
         &:hover {
             border: none;
             background-color: var(--violet-3);
+        }
+        @media screen and (max-width:600px) {
+            height: 2rem;
         }
     }
 }

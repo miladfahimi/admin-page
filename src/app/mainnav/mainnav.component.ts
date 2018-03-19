@@ -11,11 +11,13 @@ import { AppService } from '../app.service';
   styleUrls: ['./mainnav.component.scss']
 })
 export class MainnavComponent implements OnInit {
-  title: string = 'works!';
+  title: string = 'welcome!';
   constructor(private appService: AppService) {
-    this.appService.title.subscribe((data) => {
-      this.title = data;
-    })
+    setInterval(() => {
+      this.appService.title.subscribe((data) => {
+        this.title = data;
+      });
+    }, 100);
   }
 
   ngOnInit() {

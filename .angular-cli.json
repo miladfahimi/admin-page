@@ -4,11 +4,10 @@
   "project": {
     "name": "recipt-manager"
   },
-  "outDir": "./docs",
   "apps": [
     {
       "root": "src",
-      "outDir": "dist",
+      "outDir": "docs",
       "assets": [
         "assets",
         "favicon.ico"

@@ -451,10 +451,10 @@ var HomemenuComponent = (function () {
         this.rows = [1, 2];
         this.deals = [
             new __WEBPACK_IMPORTED_MODULE_2__shared_deals_model__["a" /* Deals */]('product1', 2, '#lnr-car'),
-            new __WEBPACK_IMPORTED_MODULE_2__shared_deals_model__["a" /* Deals */]('product5', 2, '#lnr-bicycle'),
             new __WEBPACK_IMPORTED_MODULE_2__shared_deals_model__["a" /* Deals */]('product2', 1, '#lnr-heart-pulse'),
             new __WEBPACK_IMPORTED_MODULE_2__shared_deals_model__["a" /* Deals */]('product3', 3, '#lnr-diamond'),
             new __WEBPACK_IMPORTED_MODULE_2__shared_deals_model__["a" /* Deals */]('product4', 4, '#lnr-screen'),
+            new __WEBPACK_IMPORTED_MODULE_2__shared_deals_model__["a" /* Deals */]('product5', 2, '#lnr-bicycle'),
             new __WEBPACK_IMPORTED_MODULE_2__shared_deals_model__["a" /* Deals */]('product6', 1, '#lnr-leaf'),
             new __WEBPACK_IMPORTED_MODULE_2__shared_deals_model__["a" /* Deals */]('product7', 3, '#lnr-printer'),
             new __WEBPACK_IMPORTED_MODULE_2__shared_deals_model__["a" /* Deals */]('product8', 4, '#lnr-shirt'),
@@ -959,10 +959,12 @@ var MainnavComponent = (function () {
     function MainnavComponent(appService) {
         var _this = this;
         this.appService = appService;
-        this.title = 'works!';
-        this.appService.title.subscribe(function (data) {
-            _this.title = data;
-        });
+        this.title = 'welcome!';
+        setInterval(function () {
+            _this.appService.title.subscribe(function (data) {
+                _this.title = data;
+            });
+        }, 100);
     }
     MainnavComponent.prototype.ngOnInit = function () {
     };

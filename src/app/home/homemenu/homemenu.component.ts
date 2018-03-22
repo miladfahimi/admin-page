@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
 
 
 //SERVICES
@@ -18,7 +19,7 @@ import { Tables } from '../../shared/tables.model';
 })
 export class HomemenuComponent implements OnInit {
   rowNumber: number[];
-  rows:number[]=[1,2];
+  rows: number[] = [1, 2];
   deals: Deals[] = [
     new Deals('product1', 2, '#lnr-car'),
     new Deals('product2', 1, '#lnr-heart-pulse'),
@@ -30,11 +31,12 @@ export class HomemenuComponent implements OnInit {
     new Deals('product8', 4, '#lnr-shirt'),
   ];
   tables: Tables[] = [
-    new Tables('product1', 'green',42,'unisex, freesize','./assets/images/chart1.png'),
-    new Tables('product2', 'blue',39,'unisex, freesize','./assets/images/chart2.png'),
+    // new Tables('product1', 'green', 42, 'unisex, freesize', './assets/images/chart1.png'),
+    // new Tables('product2', 'blue', 39, 'unisex, freesize', './assets/images/chart2.png'),
   ]
 
-  constructor(private appService: AppService) {
+  constructor(private appService: AppService,
+    private http: HttpClient) {
     this.rowNumber = [];
     for (let i = 0; i < this.deals.length / 2; i++) {
       this.rowNumber.push(i);
@@ -43,6 +45,28 @@ export class HomemenuComponent implements OnInit {
 
   ngOnInit() {
     this.appService.onUpdateTitle('home');
+
+    try {
+      setTimeout(() => {
+        this.http
+          .get("http://192.168.0.102:3100/bookingapp")
+          .subscribe((data: Tables[]) => {
+            if (data.length > 0) {
+              for (var i = 0; i < 2; i++) {
+                this.tables[i] = data[i];
+              }
+            } else {
+              throw ("No data comes from server!");
+            }
+          });
+      }, 500);
+    }
+    catch (e) {
+      console.log("error : " + e);
+    }
+    finally {
+      console.log("request sent!");
+    }
   }
 
   getCurrentDeals(currentIndex) {

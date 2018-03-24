@@ -31,8 +31,8 @@ export class HomemenuComponent implements OnInit {
     new Deals('product8', 4, '#lnr-shirt'),
   ];
   tables: Tables[] = [
-    new Tables('product2', 'blue', 39, 'unisex, freesize', './assets/images/mysvg.svg#sunny'),
-    new Tables('product1', 'green', 42, 'unisex, freesize', './assets/images/chart1.png'),
+    // new Tables('product2', 'blue', 39, 'unisex, freesize', './assets/images/mysvg.svg#sunny'),
+    // new Tables('product1', 'green', 42, 'unisex, freesize', './assets/images/chart1.png'),
   ]
 
   constructor(private appService: AppService,
@@ -45,28 +45,31 @@ export class HomemenuComponent implements OnInit {
 
   ngOnInit() {
     this.appService.onUpdateTitle('home');
+    this.onGetData();
+  }
 
-    // try {
-    //   setTimeout(() => {
-    //     this.http
-    //       .get("http://192.168.0.102:3100/bookingapp")
-    //       .subscribe((data: Tables[]) => {
-    //         if (data.length > 0) {
-    //           for (var i = 0; i < 2; i++) {
-    //             this.tables[i] = data[i];
-    //           }
-    //         } else {
-    //           throw ("No data comes from server!");
-    //         }
-    //       });
-    //   }, 500);
-    // }
-    // catch (e) {
-    //   console.log("error : " + e);
-    // }
-    // finally {
-    //   console.log("request sent!");
-    // }
+  onGetData() {
+    try {
+      setTimeout(() => {
+        this.http
+          .get("http://192.168.0.102:3100/bookingapp")
+          .subscribe((data: Tables[]) => {
+            if (data.length > 0) {
+              for (var i = 0; i < 2; i++) {
+                this.tables[i] = data[i];
+              }
+            } else {
+              throw ("No data comes from server!");
+            }
+          });
+      }, 500);
+    }
+    catch (e) {
+      console.log("error : " + e);
+    }
+    finally {
+      console.log("request sent!");
+    }
   }
 
   getCurrentDeals(currentIndex) {

@@ -16,10 +16,6 @@ export class SidebarComponent implements OnInit {
   constructor(private appService: AppService) { }
 
   ngOnInit() {
-    this.appService.bg.subscribe((data: string) =>{
-      this.newColor = data;
-      console.log(data);
-    });
   }
 
 }

@@ -16,10 +16,6 @@ export class SubsidebarComponent implements OnInit {
   constructor(private appService: AppService) { }
 
   ngOnInit() {
-    this.appService.bg1.subscribe((data: string) =>{
-      this.newColor = data;
-      console.log(data);
-    });
     this.appService.onUpdateTitle('users');
   }
 

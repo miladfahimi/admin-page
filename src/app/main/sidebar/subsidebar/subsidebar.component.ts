@@ -1,16 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AppService } from '../../app.service';
+import { AppService } from '../../../app.service';
 
 @Component({
-  selector: 'app-sidebar2nd',
-  templateUrl: './sidebar2nd.component.html',
+  selector: 'app-subsidebar',
+  templateUrl: './subsidebar.component.html',
   host: {
-    class:'sidebar2nd'
+    class:'subsidebar'
    },
-  styleUrls: ['./sidebar2nd.component.scss']
+  styleUrls: ['./subsidebar.component.scss']
 })
-export class Sidebar2ndComponent implements OnInit {
+export class SubsidebarComponent implements OnInit {
   newColor:string;
 
   constructor(private appService: AppService) { }

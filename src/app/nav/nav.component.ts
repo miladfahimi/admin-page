@@ -3,14 +3,14 @@ import { Component, OnInit } from '@angular/core';
 import { AppService } from '../app.service';
 
 @Component({
-  selector: 'app-mainnav',
-  templateUrl: './mainnav.component.html',
+  selector: 'app-nav',
+  templateUrl: './nav.component.html',
   host: {
-    class: 'mainnav'
+    class: 'nav'
   },
-  styleUrls: ['./mainnav.component.scss']
+  styleUrls: ['./nav.component.scss']
 })
-export class MainnavComponent implements OnInit {
+export class NavComponent implements OnInit {
   title: string = 'welcome!';
   constructor(private appService: AppService) {
     setInterval(() => {

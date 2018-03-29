@@ -9,10 +9,10 @@ import { AppComponent } from './app.component';
 import { AppService } from "./app.service";
 import { MainComponent } from './main/main.component';
 import { SidebarComponent } from './main/sidebar/sidebar.component';
-import { Sidebar2ndComponent } from './main/sidebar2nd/sidebar2nd.component';
+import { SubsidebarComponent } from './main/sidebar/subsidebar/subsidebar.component';
 import { ContentsComponent } from './main/contents/contents.component';
 import { ContentComponent } from './main/contents/content/content.component';
-import { MainnavComponent } from './mainnav/mainnav.component';
+import { NavComponent } from './nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
 import { ProductComponent } from './product/product.component';
@@ -21,7 +21,7 @@ import { ChartComponent } from './chart/chart.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent, outlet: 'expandmenu' },
-  { path: 'sidebar', component: Sidebar2ndComponent, outlet: 'expandmenu' },
+  { path: 'sidebar', component: SubsidebarComponent, outlet: 'expandmenu' },
   { path: 'content', component: ContentComponent },
   { path: '', redirectTo: '/content', pathMatch: 'full' },
   { path: 'user', component: UserComponent, outlet: 'expandmenu' },
@@ -36,10 +36,10 @@ const appRoutes: Routes = [
     AppComponent,
     MainComponent,
     SidebarComponent,
-    Sidebar2ndComponent,
+    SubsidebarComponent,
     ContentsComponent,
     ContentComponent,
-    MainnavComponent,
+    NavComponent,
     HomeComponent,
     UserComponent,
     ProductComponent,

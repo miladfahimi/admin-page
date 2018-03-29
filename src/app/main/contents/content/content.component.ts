@@ -3,21 +3,21 @@ import { HttpClient } from "@angular/common/http";
 
 
 //SERVICES
-import { AppService } from '../../app.service';
+import { AppService } from '../../../app.service';
 
 //MODELS
-import { Deals } from '../../shared/deals.model';
-import { Tables } from '../../shared/tables.model';
+import { Deals } from '../../../shared/deals.model';
+import { Tables } from '../../../shared/tables.model';
 
 @Component({
-  selector: 'app-homemenu',
-  templateUrl: './homemenu.component.html',
+  selector: 'app-content',
+  templateUrl: './content.component.html',
   host: {
-    class: 'homemenu'
+    class: 'content'
   },
-  styleUrls: ['./homemenu.component.scss']
+  styleUrls: ['./content.component.scss']
 })
-export class HomemenuComponent implements OnInit {
+export class ContentComponent implements OnInit {
   rowNumber: number[];
   rows: number[] = [1, 2];
   deals: Deals[] = [

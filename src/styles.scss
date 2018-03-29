@@ -12,7 +12,6 @@
 @import "../sass/layout/grid";
 
 
-@import "./src/app/home/homemenu/homemenu.component.scss";
 @import "./src/app/home/home.component.scss";
 
 
@@ -28,7 +27,8 @@
 @import "./src/app/main/main.component.scss";
 
 
-@import "./src/app/main/content/content.component.scss";
+@import "./src/app/main/contents/contents.component.scss";
+@import "./src/app/main/contents/content/content.component.scss";
 
 
 @import "./src/app/main/sidebar/sidebar.component.scss";

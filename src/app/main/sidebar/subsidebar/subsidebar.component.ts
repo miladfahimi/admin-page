@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from "@angular/router";
 
 import { AppService } from '../../../app.service';
 
@@ -13,12 +14,15 @@ import { AppService } from '../../../app.service';
 export class SubsidebarComponent implements OnInit {
   newColor:string;
 
-  constructor(private appService: AppService) { }
+  constructor(private appService: AppService,
+              private router: Router) { }
 
   ngOnInit() {
     this.appService.onUpdateTitle('users');
   }
 
-
+  onClose() {
+    this.router.navigate([{ outlets: { expandmenu: null }}]);
+  }
 
 }

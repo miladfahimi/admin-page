@@ -1,24 +1,14 @@
 <div class="subsidebar__container">
 
-
-
-    <div class="subsidebar__1st">
-        <div class="subsidebar__1st__con">
-            <h1 class="subsidebar__h1">
-                recent items
-            </h1>
-            <div class="subsidebar__icon u-c-text u-text-to-upper">
-                <a href="#">
-                    <svg class="subsidebar__svg">
-                        <use xlink:href="#lnr-arrow-down-circle"></use>
-                    </svg>
-                    <span>download pdf</span>
-                </a>
+    <div class="close">
+        <a (click)="onClose()">
+            <div class="close__btn">
+                <svg class="close__svg">
+                    <use xlink:href="#lnr-cross-circle"></use>
+                </svg>
             </div>
-        </div>
+        </a>
     </div>
-
-
 
     <div class="subsidebar__2nd">
         <div class="subsidebar__2nd__con">
@@ -79,6 +69,21 @@
         </div>
     </div>
 
+    <div class="subsidebar__1st">
+        <div class="subsidebar__1st__con">
+            <h1 class="subsidebar__h1">
+                recent items
+            </h1>
+            <div class="subsidebar__icon u-c-text u-text-to-upper">
+                <a href="#">
+                    <svg class="subsidebar__svg">
+                        <use xlink:href="#lnr-arrow-down-circle"></use>
+                    </svg>
+                    <span>download pdf</span>
+                </a>
+            </div>
+        </div>
+    </div>
 
 
 </div>

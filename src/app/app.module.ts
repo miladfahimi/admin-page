@@ -13,13 +13,14 @@ import { SubsidebarComponent } from './main/sidebar/subsidebar/subsidebar.compon
 import { ContentsComponent } from './main/contents/contents.component';
 import { ContentComponent } from './main/contents/content/content.component';
 import { NavComponent } from './nav/nav.component';
+import { MainService } from './main/main.service';
 
 
 const appRoutes: Routes = [
   { path: 'sidebar', component: SubsidebarComponent, outlet: 'expandmenu' },
   { path: 'content', component: ContentComponent },
   { path: '', redirectTo: '/content', pathMatch: 'full' },
-  { path: 'chart', component: SubsidebarComponent, outlet: 'expandmenu' },
+  { path: 'subsidebar', component: SubsidebarComponent, outlet: 'expandmenu' },
 ];
 
 
@@ -36,7 +37,8 @@ const appRoutes: Routes = [
   imports: [BrowserModule, FormsModule, HttpClientModule,
     RouterModule.forRoot(appRoutes)],
   providers: [
-    AppService
+    AppService,
+    MainService
   ],
   bootstrap: [AppComponent]
 })

@@ -50,17 +50,4 @@
         width: 1em;
         height: 1em;
     }
-    &__end {
-        flex: 1;
-        height: 30.7rem;
-        text-align: left;
-        align-self: center;
-        &:hover {
-            border: none;
-            background-color: var(--violet-3);
-        }
-        @media screen and (max-width:600px) {
-            height: 2rem;
-        }
-    }
 }

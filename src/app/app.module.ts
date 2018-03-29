@@ -8,7 +8,6 @@ import { FormsModule } from "@angular/forms";
 import { AppComponent } from './app.component';
 import { AppService } from "./app.service";
 import { MainComponent } from './main/main.component';
-import { NavComponent } from './main/content/nav/nav.component';
 import { SidebarComponent } from './main/sidebar/sidebar.component';
 import { Sidebar2ndComponent } from './main/sidebar2nd/sidebar2nd.component';
 import { ContentComponent } from './main/content/content.component';
@@ -36,7 +35,6 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     MainComponent,
-    NavComponent,
     SidebarComponent,
     Sidebar2ndComponent,
     ContentComponent,

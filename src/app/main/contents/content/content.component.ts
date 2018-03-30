@@ -45,32 +45,32 @@ export class ContentComponent implements OnInit {
 
   ngOnInit() {
     this.appService.onUpdateTitle('home');
-    this.onGetData();
+    // this.onGetData();
   }
 
-  onGetData() {
-    try {
-      setTimeout(() => {
-        this.http
-          .get("http://192.168.0.102:3100/bookingapp")
-          .subscribe((data: Tables[]) => {
-            if (data.length > 0) {
-              for (var i = 0; i < 2; i++) {
-                this.tables[i] = data[i];
-              }
-            } else {
-              throw ("No data comes from server!");
-            }
-          });
-      }, 500);
-    }
-    catch (e) {
-      console.log("error : " + e);
-    }
-    finally {
-      console.log("request sent!");
-    }
-  }
+  // onGetData() {
+  //   try {
+  //     setTimeout(() => {
+  //       this.http
+  //         .get("http://192.168.0.102:3100/bookingapp")
+  //         .subscribe((data: Tables[]) => {
+  //           if (data.length > 0) {
+  //             for (var i = 0; i < 2; i++) {
+  //               this.tables[i] = data[i];
+  //             }
+  //           } else {
+  //             throw ("No data comes from server!");
+  //           }
+  //         });
+  //     }, 500);
+  //   }
+  //   catch (e) {
+  //     console.log("error : " + e);
+  //   }
+  //   finally {
+  //     console.log("request sent!");
+  //   }
+  // }
 
   getCurrentDeals(currentIndex) {
     let item = [];

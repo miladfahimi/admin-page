@@ -18,7 +18,6 @@ export class SubsidebarComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit() {
-    this.appService.onUpdateTitle('users');
   }
 
   onClose() {

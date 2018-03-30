@@ -21,11 +21,11 @@ import { MenuItems } from '../../shared/menuitems.model';
 export class SidebarComponent implements OnInit {
   menuItems: MenuItems[]=[
     new MenuItems('home','#lnr-home','home'),
-    new MenuItems('home','#lnr-upload','categories'),
-    new MenuItems('home','#lnr-gift','products'),
-    new MenuItems('home','#lnr-chart-bars','chart'),
-    new MenuItems('home','#lnr-user','users'),
-    new MenuItems('home','#lnr-cog','setting'),
+    new MenuItems('categories','#lnr-upload','categories'),
+    new MenuItems('products','#lnr-gift','products'),
+    new MenuItems('chart','#lnr-chart-bars','chart'),
+    new MenuItems('users','#lnr-user','users'),
+    new MenuItems('setting','#lnr-cog','setting'),
   ]
   constructor(private appService: AppService) { }
 
@@ -34,6 +34,8 @@ export class SidebarComponent implements OnInit {
 
   ////////////////////////////////////////////////////
   //METHODES
-
+  onClick(name){
+    this.appService.onUpdateTitle(name);
+  }
 
 }

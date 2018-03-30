@@ -15,7 +15,6 @@ export class AppService {
 
   onUpdateTitle(title: string) {
     this.title.emit(title);
-    console.log(title);
   }
 
 }

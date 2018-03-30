@@ -21,58 +21,18 @@
             <div *ngFor="let subMenuItem of subMenuItems" class="subsidebar__icon u-c-text u-text-to-upper">
                 <a href="#">
                     <svg class="subsidebar__svg">
-                        <use xlink:href="#lnr-menu-circle"></use>
+                        <use [attr.xlink:href]="subMenuItem.icon"></use>
                     </svg>
                     <span>{{subMenuItem.name}}</span>
                 </a>
             </div>
-            <!-- <div class="subsidebar__icon u-c-text u-text-to-upper">
-                <a href="#">
-                    <svg class="subsidebar__svg">
-                        <use xlink:href="#lnr-plus-circle"></use>
-                    </svg>
-                    <span>add</span>
-                </a>
-            </div>
-            <div class="subsidebar__icon u-c-text u-text-to-upper">
-                <a href="#">
-                    <svg class="subsidebar__svg">
-                        <use xlink:href="#lnr-plus-circle"></use>
-                    </svg>
-                    <span>update</span>
-                </a>
-            </div>
-            <div class="subsidebar__icon u-c-text u-text-to-upper">
-                <a href="#">
-                    <svg class="subsidebar__svg">
-                        <use xlink:href="#lnr-plus-circle"></use>
-                    </svg>
-                    <span>delete</span>
-                </a>
-            </div>
-            <div class="subsidebar__icon u-c-text u-text-to-upper">
-                <a href="#">
-                    <svg class="subsidebar__svg">
-                        <use xlink:href="#lnr-history"></use>
-                    </svg>
-                    <span>history</span>
-                </a>
-            </div>
-            <div class="subsidebar__icon u-c-text u-text-to-upper">
-                <a href="#">
-                    <svg class="subsidebar__svg">
-                        <use xlink:href="#lnr-question-circle"></use>
-                    </svg>
-                    <span>info</span>
-                </a>
-            </div> -->
         </div>
     </div>
 
     <div class="subsidebar__1st">
         <div class="subsidebar__1st__con">
             <h1 class="subsidebar__h1">
-               {{subMenuItems}}
+                recent items
             </h1>
             <div class="subsidebar__icon u-c-text u-text-to-upper">
                 <a href="#">

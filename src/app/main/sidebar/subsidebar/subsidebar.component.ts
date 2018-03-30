@@ -11,7 +11,6 @@ import { AppService } from '../../../app.service';
 
 ////////////////////////////////////////////////////
 //MODELS
-import { MenuItems } from '../../../shared/menuitems.model';
 import { SubMenuItems } from '../../../shared/submenuitems.model';
 
 @Component({
@@ -24,6 +23,7 @@ import { SubMenuItems } from '../../../shared/submenuitems.model';
 })
 @Injectable()
 export class SubsidebarComponent implements OnInit, OnDestroy {
+
   ////////////////////////////////////////////////////
   //VARIABLES
   subMenuItems: SubMenuItems[];

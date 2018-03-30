@@ -19,7 +19,14 @@ import { MenuItems } from '../../shared/menuitems.model';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
+
+  ////////////////////////////////////////////////////
+  //VARIABLES
   menuItems: MenuItems[];
+
+
+  ////////////////////////////////////////////////////
+  //CYCLE HOOKS
   constructor(private appService: AppService) { }
 
   ngOnInit() {
@@ -28,7 +35,7 @@ export class SidebarComponent implements OnInit {
 
   ////////////////////////////////////////////////////
   //METHODES
-  onClick(name){
+  onClick(name) {
     this.appService.onUpdateTitle(name);
     this.appService.onGetSubMenuItem(name);
   }

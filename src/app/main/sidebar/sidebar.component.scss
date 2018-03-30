@@ -1,10 +1,11 @@
 .sidebar {
-    flex: 0 0 5rem; // height: 92vh;
+    flex: 0 0 5rem; 
     text-align: center;
     color: white;
     background-color: var(--violet-3);
     @media screen and (max-width: 600px) {
-        height: 5rem;
+        flex: 0 0 4rem; 
+        height: 4rem;
     }
     &__container {
         display: flex;

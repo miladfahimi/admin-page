@@ -19,17 +19,11 @@ import { MenuItems } from '../../shared/menuitems.model';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
-  menuItems: MenuItems[]=[
-    new MenuItems('home','#lnr-home','home'),
-    new MenuItems('categories','#lnr-upload','categories'),
-    new MenuItems('products','#lnr-gift','products'),
-    new MenuItems('chart','#lnr-chart-bars','chart'),
-    new MenuItems('users','#lnr-user','users'),
-    new MenuItems('setting','#lnr-cog','setting'),
-  ]
+  menuItems: MenuItems[];
   constructor(private appService: AppService) { }
 
   ngOnInit() {
+    this.menuItems = this.appService.onGetMenuItem();
   }
 
   ////////////////////////////////////////////////////
@@ -37,5 +31,4 @@ export class SidebarComponent implements OnInit {
   onClick(name){
     this.appService.onUpdateTitle(name);
   }
-
 }

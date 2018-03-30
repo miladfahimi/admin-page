@@ -30,5 +30,6 @@ export class SidebarComponent implements OnInit {
   //METHODES
   onClick(name){
     this.appService.onUpdateTitle(name);
+    this.appService.onGetSubMenuItem(name);
   }
 }

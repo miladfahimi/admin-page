@@ -18,15 +18,15 @@
             <div class="subsidebar__btn">
                 <button class="btn btn__purple u-text-to-upper">new item</button>
             </div>
-            <div class="subsidebar__icon u-c-text u-text-to-upper">
+            <div *ngFor="let subMenuItem of subMenuItems" class="subsidebar__icon u-c-text u-text-to-upper">
                 <a href="#">
                     <svg class="subsidebar__svg">
                         <use xlink:href="#lnr-menu-circle"></use>
                     </svg>
-                    <span>edit</span>
+                    <span>{{subMenuItem.name}}</span>
                 </a>
             </div>
-            <div class="subsidebar__icon u-c-text u-text-to-upper">
+            <!-- <div class="subsidebar__icon u-c-text u-text-to-upper">
                 <a href="#">
                     <svg class="subsidebar__svg">
                         <use xlink:href="#lnr-plus-circle"></use>
@@ -65,14 +65,14 @@
                     </svg>
                     <span>info</span>
                 </a>
-            </div>
+            </div> -->
         </div>
     </div>
 
     <div class="subsidebar__1st">
         <div class="subsidebar__1st__con">
             <h1 class="subsidebar__h1">
-                recent items
+               {{subMenuItems}}
             </h1>
             <div class="subsidebar__icon u-c-text u-text-to-upper">
                 <a href="#">

@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////////
 //MODELS
-import { SubMenuItems } from './submenuitems.model';
+import { SubMenuItems } from './subMenuItems.model';
 
 export class MenuItems {
     public name: string;

@@ -11,7 +11,7 @@ import { AppService } from '../../../app.service';
 
 ////////////////////////////////////////////////////
 //MODELS
-import { SubMenuItems } from '../../../shared/submenuitems.model';
+import { SubMenuItems } from '../../../shared/subMenuItems.model';
 
 @Component({
   selector: 'app-subsidebar',

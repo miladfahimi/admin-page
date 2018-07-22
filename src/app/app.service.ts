@@ -13,7 +13,7 @@ import { BehaviorSubject } from "rxjs/BehaviorSubject";
 ////////////////////////////////////////////////////
 //MODELS
 import { MenuItems } from './shared/menuitems.model';
-import { SubMenuItems } from './shared/submenuitems.model';
+import { SubMenuItems } from './shared/subMenuItems.model';
 
 @Injectable()
 export class AppService {

@@ -12,14 +12,11 @@ import { AppService } from '../app.service';
 })
 export class NavComponent implements OnInit {
   title: string = 'welcome!';
-  constructor(private appService: AppService) {
-    setInterval(() => {
-      this.appService.title.subscribe((data) => {
-        this.title = data;
-      });
-    }, 100);
-  }
+  constructor(private appService: AppService) { }
 
   ngOnInit() {
+    this.appService.title.subscribe((data) => {
+      this.title = data;
+    });
   }
 }

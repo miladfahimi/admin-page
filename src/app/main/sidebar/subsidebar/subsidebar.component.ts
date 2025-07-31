@@ -49,7 +49,7 @@ export class SubsidebarComponent implements OnInit, OnDestroy {
     this.subscription.unsubscribe();
   }
   ////////////////////////////////////////////////////
-  //METHODES
+  //METHODS
   onClose() {
     this.appService.onCloseSubSidebar();
   }

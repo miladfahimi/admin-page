@@ -49,7 +49,7 @@ export class AppService {
   }
 
   ////////////////////////////////////////////////////
-  //METHODES
+  //METHODS
   onUpdateTitle(title: string) {
     this.title.emit(title);
   }

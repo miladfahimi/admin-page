@@ -1,9 +1,9 @@
 # Admin-Page
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.3.
-Latest version of production of The Project is always avilable in githup/pages at (https://milad000.github.io/admin-page-example).
+Latest version of production of The Project is always available in GitHub/pages at (https://milad000.github.io/admin-page-example).
 
-In this project we want to manage an online shop website by having ability to add/remove/update about users,products,categories,deals and etc..., and have our latest data about checkouts, balances and results as charts and lists in first page! create recipts directly, and manage all peyments.
+In this project we want to manage an online shop website by having ability to add/remove/update about users,products,categories,deals and etc..., and have our latest data about checkouts, balances and results as charts and lists in first page! create recipts directly, and manage all payments.
 
 In first step:
 Sketch and create an interface prototype of project and create first folders structure as needs in project.

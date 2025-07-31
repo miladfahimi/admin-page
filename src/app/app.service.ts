@@ -58,13 +58,13 @@ export class AppService {
     return this.menuItems;
   }
 
-  onGetSubMenuItem(submenu) {
-    for (var i = 0; i < this.menuItems.length; i++) {
-      if (this.menuItems[i].name == submenu) {
-        var selectedItem = i;
-      }
+  onGetSubMenuItem(submenu: string) {
+    const selectedItem = this.menuItems.find(item => item.name === submenu);
+    if (!selectedItem) {
+      this.subMenuItems.next([]);
+      return;
     }
-    this.subMenuItems.next(this.menuItems[selectedItem].subMenu);
+    this.subMenuItems.next(selectedItem.subMenu);
   }
   onCloseSubSidebar() {
     this.router.navigate([{ outlets: { expandmenu: null } }]);

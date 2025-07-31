@@ -19,6 +19,10 @@ After finish all about Front-end I will start the Back-end part using java and r
 
 Please let me know what are your thoughts,comments and suggestions on this.
 
+## Install dependencies
+
+Run `npm install` to install project dependencies before starting the development server.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

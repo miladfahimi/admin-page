@@ -1,9 +1,0 @@
-<div class="sidebar__container">
-    <a *ngFor="let menuItem of menuItems" (click)=onClick(menuItem.name); [routerLink]="[{ outlets: { expandmenu: ['subsidebar'] } }]" routerLinkActive="active">
-        <div class="sidebar__icon">
-            <svg class="sidebar__svg">
-                <use [attr.xlink:href]="menuItem.icon"></use>
-            </svg>
-        </div>
-    </a>
-</div>
